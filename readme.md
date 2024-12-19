@@ -30,7 +30,6 @@ Detection, to get ROI -> Segmentation, to get a mask -> Pose Estimation -> Insig
 
 Just based on video and pixels, no skeleton based analysis.
 
-
 ## Research and Development
 
 * Stack
@@ -52,6 +51,8 @@ Just based on video and pixels, no skeleton based analysis.
   * [Kaggle - English Premier League](https://www.kaggle.com/datasets/saife245/english-premier-league)
 
 * Tooling
+  * PyTorch Geometric Tempory + PyTorch Lightning
+  * [PyTorch3D by facebook](https://github.com/facebookresearch/pytorch3d/tree/main)
   * [TIMM](https://huggingface.co/docs/timm/index) - A pip package containing SOTA CV models
   * Scikit-learn - "classical machine learning"
   * [pytorch-recipies](https://github.com/facebookresearch/recipes)
@@ -78,7 +79,9 @@ Just based on video and pixels, no skeleton based analysis.
   * [Deep Learning for Videos: A 2018 Guide to Action Recognition](https://blog.qure.ai/notes/deep-learning-for-videos-action-recognition-review)
 
 * Learning resources:
+  * [Udacity - DL w/ PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
   * [DAIR.AI](https://github.com/dair-ai)
+    * [YouTube Universitry](https://github.com/dair-ai/ML-YouTube-Courses)
   * [PyTorch Notebooks](https://github.com/dair-ai/pytorch_notebooks)
 
 * Data Annotation
