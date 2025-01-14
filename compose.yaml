@@ -5,7 +5,12 @@ services:
       dockerfile: ./docker/dockerfile.devbox
     volumes:
       - .:/tactifai:cached
-    ports:
-      - 8000:8000
     stdin_open: true
     tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

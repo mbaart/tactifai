@@ -9,18 +9,20 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
     git \
-    && add-apt-repository ppa:deadsnakes/ppa\
+    && add-apt-repository ppa:deadsnakes/ppa \
     && apt-get update \
-    && apt-get install -y python3.10 \
+    && apt-get install -y python3.10 python3.10-venv python3.10-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
     
 WORKDIR /tactifai
 
-
-RUN python3 -m venv /tactifai/.venv && \
-    /tactifai/.venv/Scripts/activate
+# Install pip
+RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10 
 
 # Install pytorch packages
-RUN pip install torch torchvision torchaudio opencv-python 
+RUN python3.10 -m pip install torch torchvision torchaudio
+
+# Install Jupyter Notebook tools
+RUN python3.10 -m pip install ipykernel
 
 CMD [ "bash" ]
